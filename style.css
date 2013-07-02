@@ -2,6 +2,16 @@ html {
 	height:100%;
 }
 
+#weatherHide {
+	display:none; /* hide main content */
+}
+
+
+#loading {
+	width:64px;
+	height:64px;
+}
+
 body { /* Ensures background takes full-screen */
 	height: 100%;
     margin: 0;
@@ -79,23 +89,28 @@ h5 {
 	}
 	
 #getLocation {
-	width:140px;
-	height:100px;
-	background-color:#1b75bb;
-	margin-left:50px;
-	color:white; 
-	padding:20px 20px 20px 30px;
-	line-height:100px; /*centres text vertically inside box*/
+	width: 600px;
+	height: 50px;
+	background-color: #1b75bb;
+	color: white;
+	padding: 20px 20px 20px 20px;
+	line-height: 50px;
 	text-shadow: #818181 0px 1px 1px;
-	text-align:center;
-	display:inline;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 30px;
 	}
+	
+#getLocation:hover {
+	background-color: #65aee6;
+}
 	
 #getLocation a {
 	font-weight:100;
 	color:white;
 	text-shadow: #818181 0px 1px 1px;
 	text-decoration:none;
+	
 }		
 	
 #twitter {
@@ -128,6 +143,10 @@ h5 {
 	color:white;
 	line-height:40px;	
 	
+}
+
+#twitter a:hover {
+	color:#1b75bb;
 }
 
 
@@ -164,7 +183,7 @@ h5 {
 	background-color:white;
 	height:100%;
 	width:100%;
-	min-height:500px;
+	min-height:600px;
 }
 
 #section-today h2 {
@@ -193,6 +212,7 @@ h5 {
 .section { /*tabbed data */
 	margin-left:60px;
 	margin-top:50px;
+	display:inline-block;
 }
 
 .section-box {
@@ -246,16 +266,14 @@ h5 {
 
 .temp-caps {
 		margin-bottom:20px;
-		margin-left:30px;
+		margin-left:20px;
 		letter-spacing:5px;
 }
 
 
-
 input {
 	background-color:transparent;
-	border:none;
-	border-bottom:2px solid #808080;
+	border:2px solid #808080;
 	font-size:46px;
 	font-weight:900;
 	color:#1b75bb;
@@ -274,7 +292,7 @@ input {
 
 #userGender {
 	width:160px;
-	text-align:left;
+	text-align:center;
 }
 
 input:focus {

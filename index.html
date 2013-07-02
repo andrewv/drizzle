@@ -12,70 +12,70 @@
 </head>
 
 <body>
-	
-	
-<div id = "main-container">	
-	<div class = "section-white">
-	<div class = "sectionHeader">
-	 <img src = "drizzle.png">
-	</div> 
-	<div id = "twitter">
-		<h3><img src = "twitter.png"><a href = "http://www.twitter.com/andrewv">@andrewv</a></h3>
-	</div>
-		<div class = "section">
-		<h5>I am a </h5><input type = "text" name = "Age" maxlength="3" id = "userAge" value = "age" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'age':this.value;"><h5>year old</h5><input type = "text" name = "gender" maxlength="6" id = "userGender" value = "gender" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'gender':this.value;">
-		<br>
-		<h5>My height is</h5><input type = "text" name = "Height" maxlength = "3" id = "userHeight"><h5>cms</h5>
-		<br>
-		<h5>My weight is</h5><input type = "text" name = "Weight" maxlength = "3" id = "userWeight"><h5>kgs</h5>
+	<div id = "main-container">	
+		<div class = "section-white">
+			<div class = "sectionHeader">
+				<img src = "drizzle.png">
+			</div> 
+			<div id = "twitter">
+				<h3><img src = "twitter.png"><a href = "http://www.twitter.com/andrewv">@andrewv</a></h3>
+			</div>
+			<div class = "section">
+				<div class = "section-box">
+							<h4 class = "temp-caps">AGE</h4>
+							<input type = "text" name = "Age" maxlength="3" id = "userAge">
+						</div>
+						<div class = "section-box">
+							<h4 class = "temp-caps">MALE/FEMALE</h4>
+							<input type = "text" name = "gender" maxlength="6" id = "userGender">
+						</div>
+						<div class = "section-box">
+							<h4 class = "temp-caps">HEIGHT (cms)</h4>
+							<input type = "text" name = "Height" maxlength = "3" id = "userHeight">
+						</div>
+						<div class = "section-box">
+							<h4 class = "temp-caps">WEIGHT (kgs)</h4>
+							<input type = "text" name = "Weight" maxlength = "3" id = "userWeight">
+						</div>
+						<h1 id = "getLocation"><a href = "#">Go</a></h1>
+						
+			</div>
+				
+		</div> 
+		<div id = "weatherHide">
+			<div id = "section-today">
+				<h1 class = "sectionHeader">Now</h1>
+					<div class = "section">
+						<div class = "section-box">
+							<h4 class = "temp-caps">AIR TEMPERATURE</h4>
+							<h2 class = "temp" id = "currentTemp"></h2><h2 class = "temp-small">°C</h2>
+						</div>
+						<div class = "section-box">
+							<h4 class = "temp-caps">WIND SPEED</h4>
+							<h2 class = "temp" id = "currentWind"></h2><h2 class = "temp-small">km/h</h2>
+						</div>
+						<div class = "section-box">
+							<h4 class = "temp-caps">HUMIDITY</h4>
+							<h2 class = "temp" id = "currentRH">%</h2>
+						</div>
+						<div class = "section-box">
+							<h4 class = "temp-caps">FEELS LIKE FOR YOU</h4>
+							<h2 class = "temp" id = "roundedUserApparentTemp"></h2><h2 class = "temp-small">°C</h2>
+						</div>
+					</div>
+					<h3 class = "temp-rain" id = "clothingMSG1"></h3>
+				</div>
+			<div id = "section-tomorrow">
+				<h1 class = "sectionHeader">Next</h1>
+				<h3 class = "temp-rain" id = "nextForecast"></h3>
+				<br>
+				<h3 id = "legend-blue">Air Temperature</h3>
+				<h3 id = "legend-red">Feels Like For You</h3>
+				<div class = "section">
+					<canvas id="canvas" height="450" width="900"></canvas>
+				</div>	
+			</div>
 		</div>
-		<h1 id = "getLocation"><a href = "#">Go</a></h1>
-		
-	</div>
-	<div id = "section-today">
-	<h1 class = "sectionHeader">Now</h1>
-		
-		<div class = "section">
-			<div class = "section-box">
-				<h4 class = "temp-caps">AIR TEMPERATURE</h4>
-				<h2 class = "temp" id = "currentTemp"></h2><h2 class = "temp-small">°C</h2>
-			</div>
-
-			<div class = "section-box">
-				<h4 class = "temp-caps">WIND SPEED</h4>
-				<h2 class = "temp" id = "currentWind"></h2><h2 class = "temp-small">km/h</h2>
-			</div>
-			<div class = "section-box">
-				<h4 class = "temp-caps">HUMIDITY</h4>
-				<h2 class = "temp" id = "currentRH">%</h2>
-			</div>
-			<div class = "section-box">
-				<h4 class = "temp-caps">FEELS LIKE FOR YOU</h4>
-				<h2 class = "temp" id = "roundedUserApparentTemp"></h2><h2 class = "temp-small">°C</h2>
-			</div>
-			
-		</div>
-		<h3 class = "temp-rain" id = "clothingMSG1"></h3>
-	</div>
-
-		<div id = "section-tomorrow">
-		<h1 class = "sectionHeader">Next</h1>
-			<h3 class = "temp-rain" id = "nextForecast"></h3>
-			<br>
-			<h3 id = "legend-blue">Air Temperature</h3>
-			<h3 id = "legend-red">Feels Like For You</h3>
-		<div class = "section">
-			
-			<canvas id="canvas" height="450" width="900"></canvas>
-			
-		</div>
-			
-	</div>
-			
-
-	</div>
-</div>
-
 </body>
 
 

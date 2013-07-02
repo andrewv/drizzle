@@ -1,5 +1,7 @@
 var Location = {}; //global object
 
+
+
 $(document).ready(function() { 
 
 			if (navigator.geolocation) {
@@ -36,13 +38,11 @@ $(document).ready(function() {
 		var userHeight = ($('#userHeight').val()); 
 		var userWeight = ($('#userWeight').val());
 		var userAge = ($("#userAge").val()); 
-		console.log("HEIGHT" + userHeight);
 		if (userHeight.length == 0) {
 			alert("Please enter your height in whole centimetres")
 			} else {
 				console.log("NEW HEIGHT" + userHeight);
 				if (isNaN(userHeight)) {
-					console.log(isNaN(userHeight));
 					alert("Please enter your height in whole numbers only")
 				} else {
 					if (userWeight.length == 0) {
@@ -69,6 +69,10 @@ $(document).ready(function() {
 			
 	});
 	function StartDrizzle() {
+	$(document.body).animate({
+    'scrollTop':   $('#weatherHide').offset().top
+}, 2000);
+
         $.ajax({
            url: JSONURL, //URL of JSON
            data: {'units':'si'}, // to add at end of URL
@@ -110,11 +114,11 @@ $(document).ready(function() {
 						console.log("user bmi offset " + userBMIOffset);
 					
 				/***GETS USER GENDER ***/
-				if (document.getElementById('userGender').value == "male") {
+				if (document.getElementById('userGender').value.length == 4) {
 					var userGender = "0"
 						console.log("male");
 				} else {
-				if (document.getElementById('userGender').value == "female") {
+				if (document.getElementById('userGender').value.length == 6) {
 					var userGender = "1.5" //gender temperature offset
 						console.log("Female");
 					}
@@ -319,23 +323,10 @@ $(document).ready(function() {
 
 					$('#roundedUserApparentTemp').html("<h2 class = 'temp'>" + roundedUserApparentTemp + "</h2>");
 					
+					$('#loading').hide();
 					
+					$('#weatherHide').show();
 
-				
-				
-				//*** CLOTHING *** Name of item, CLO value, Layer value //
-				var maleClothing = [
-				[["T-Shirt"],0.09,1],
-				[["Light short sleeve shirt"],0.14,1],
-				[["Light long sleeve shirt"],0.22,1],
-				[["Heavy short sleeve shirt"],0.25,1],
-				[["Heavy long sleeve shirt"],0.29,1],
-				[["Light sweater"],0.20,2],
-				[["Heavy sweater"],0.37,2],
-				[["Light jacket"],0.22,3],
-				[["Heavy jacket"],0.49,3]
-				];
-				
 				var targetCLOValue = -(0.04*userApparentTemp)+1.13
 				
 				console.log(targetCLOValue);
