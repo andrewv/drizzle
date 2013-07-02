@@ -31,6 +31,44 @@ $(document).ready(function() {
 			var JSONURL = "https://api.forecast.io/forecast/" + forecastAPI + "/" + Location.latitude + "," + Location.longitude;
 			console.log(JSONURL);
 	$('#getLocation').on('click', function(){
+		
+		//VALIDATION
+		var userHeight = ($('#userHeight').val()); 
+		var userWeight = ($('#userWeight').val());
+		var userAge = ($("#userAge").val()); 
+		console.log("HEIGHT" + userHeight);
+		if (userHeight.length == 0) {
+			alert("Please enter your height in whole centimetres")
+			} else {
+				console.log("NEW HEIGHT" + userHeight);
+				if (isNaN(userHeight)) {
+					console.log(isNaN(userHeight));
+					alert("Please enter your height in whole numbers only")
+				} else {
+					if (userWeight.length == 0) {
+						alert("Please enter your weight in whole kilograms")
+						} else {
+							if (isNaN(userWeight)) {
+								alert("Please enter your weight in whole numbers only")
+							} else {
+								if (userAge.length == 0) {
+									alert("Please enter your age in whole numbers")
+								} else {
+									if (isNaN(userAge)) {
+										alert("Please enter your age in whole numbers only")
+									} else {
+										StartDrizzle();
+									}
+ 
+								}
+							}
+			
+						}
+					}
+				}	
+			
+	});
+	function StartDrizzle() {
         $.ajax({
            url: JSONURL, //URL of JSON
            data: {'units':'si'}, // to add at end of URL
@@ -41,7 +79,7 @@ $(document).ready(function() {
                parseData(data); //runs this function
 			   }
 		});
-	});
+	};
     
     function parseData(rtdata){ //MAIN FUNCTION
     
@@ -194,7 +232,7 @@ $(document).ready(function() {
 				},
 				{
 					fillColor : "rgba(151,187,205,0)",
-					strokeColor : "#ff3800",
+					strokeColor : "rgba(12,181,15,1)",
 					pointColor : "rgba(151,187,205,1)",
 					pointStrokeColor : "#fff",
 					data : nextUserTemp,
@@ -212,7 +250,7 @@ $(document).ready(function() {
 			scaleStepWidth : 1,
 			//Number - The scale starting value
 			scaleStartValue : nextTempLow,
-			datasetStrokeWidth : 12,
+			datasetStrokeWidth : 6,
 			bezierCurve: false,
 			pointDot : false,
 			scaleFontFamily : "'Lato'",
@@ -273,7 +311,7 @@ $(document).ready(function() {
 
 					$('#currentWind').html("<h2 class = 'temp'>" + currentWind + "</h2>");
 				
-					$('#currentRH').html("<h2 class = 'temp'>" + (currentRH)*100 + "%</h2>");
+					$('#currentRH').html("<h2 class = 'temp'>" + (currentRH)*100 + "</h2>");
 					
 					$('#clothingMSG1').html("<h3 class = 'temp-rain'>" + clothingMSG1 + "</h3>");
 					
