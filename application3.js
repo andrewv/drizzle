@@ -35,6 +35,15 @@ $(document).ready(function() {
 	$('#getLocation').on('click', function(){
 		
 		//VALIDATION
+		
+		 $.fn.scrollView = function () {
+    return this.each(function () {
+        $('html, body').animate({
+            scrollTop: $(this).offset().top
+        }, 1000);
+    });
+}
+		
 		var userHeight = ($('#userHeight').val()); 
 		var userWeight = ($('#userWeight').val());
 		var userAge = ($("#userAge").val()); 
@@ -69,10 +78,7 @@ $(document).ready(function() {
 			
 	});
 	function StartDrizzle() {
-	$(document.body).animate({
-    'scrollTop':   $('#weatherHide').offset().top
-}, 2000);
-
+		$('#scrollToHere').scrollView();
         $.ajax({
            url: JSONURL, //URL of JSON
            data: {'units':'si'}, // to add at end of URL
@@ -337,6 +343,8 @@ $(document).ready(function() {
 			}	
 
     }
+    
+   
     
 });	//closes doc.ready
 

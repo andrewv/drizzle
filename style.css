@@ -6,6 +6,13 @@ html {
 	display:none; /* hide main content */
 }
 
+#masthead {
+	margin: 0 auto;
+	text-align:center;
+	display:block;
+	margin-bottom:50px;
+}
+
 
 #loading {
 	width:64px;
@@ -69,6 +76,14 @@ h5 {
 	display:inline;
 }
 
+
+h6 {
+	
+	font-size:14px;
+	font-weight:300;
+	color:#808080;
+}
+
 #canvas {
 	width:200px;
 	height:200px;
@@ -87,6 +102,10 @@ h5 {
 	text-shadow: #818181 0px 1px 1px;
 	text-align:center;
 	}
+	
+.section-white .sectionHeader{
+	position:absolute;
+}
 	
 #getLocation {
 	width: 600px;
@@ -122,6 +141,8 @@ h5 {
 	padding:10px 10px 10px 10px;
 	line-height:100px; /*centres text vertically inside box*/
 	text-shadow: #818181 0px 1px 1px;
+	position: absolute;
+	margin-top: 130px;
 	}
 	
 #twitter img {
@@ -183,7 +204,7 @@ h5 {
 	background-color:white;
 	height:100%;
 	width:100%;
-	min-height:600px;
+	min-height:700px;
 }
 
 #section-today h2 {
@@ -243,7 +264,9 @@ h5 {
 	margin-left:100px;
 }
 
-
+h3 a {
+	text-decoration:none;
+}
 
 
 #highlight {
