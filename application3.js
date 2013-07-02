@@ -135,7 +135,7 @@ $(document).ready(function() {
 					if (nextUserTemp[i]<nextTempLow) {
 						nextTempLow = nextUserTemp[i];
 					}
-					if (nextUserTemp[i]>nextTempMax) {
+					if (nextUserTemp[i]>nextTempMax) { 
 						nextTempMax = nextUserTemp[i];
 					} 
 					
