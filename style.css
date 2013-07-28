@@ -233,14 +233,24 @@ h6 {
 .section { /*tabbed data */
 	margin-left:60px;
 	margin-top:50px;
-	display:inline-block;
+	display:block;
+	margin: 0 auto;
+	width: 900px;
+}
+
+.section-today {
+	margin-left:60px;
+	margin-top:50px;
+	display:block;
+	margin: 0 auto;
+	width: 1200px;
 }
 
 .section-box {
 	text-align:center;
-	width:300px;
+	padding-right: 5%;
 	height:150px;
-	display:inline-block;
+	width: 900px;
 }
 
 #legend-red {
